@@ -150,11 +150,37 @@ nav a {
     color: var(--warn);
 }
 
+.detail {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+}
+
+.detail-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url("https://image.tmdb.org/t/p/w1280//4tjxYg2AbOzzG9G1YuiT2NzYhlH.jpg");
+
+    background-size: cover;
+    min-height: 100vh;
+}
+
+dt {
+    color: var(--accent);
+}
+
 /* 미디어 쿼리 1 */
 @media (min-width: 600px) {
     nav ul {
         flex-direction: row;
         gap: var(--gap);
+    }
+
+    .detail {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .detail img {
+        width: 100%;
     }
 }
 
